@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://src/items/ItemResource.cs" id="1_ItemResource"]
+
+[resource]
+script = ExtResource("1_ItemResource")
+id = "apple"
+display_name = "Apple"
+description = "A crisp red apple."
+tags = PackedStringArray("fruit", "food")
+base_value = 5

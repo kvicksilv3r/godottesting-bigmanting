@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://src/items/ItemResource.cs" id="1_ItemResource"]
+
+[resource]
+script = ExtResource("1_ItemResource")
+id = "gold_coin"
+display_name = "Gold Coin"
+description = "Shiny and valuable."
+tags = PackedStringArray("treasure", "metal")
+base_value = 20

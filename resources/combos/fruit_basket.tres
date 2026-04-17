@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ComboRule" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://src/items/ComboRule.cs" id="1_ComboRule"]
+
+[resource]
+script = ExtResource("1_ComboRule")
+combo_name = "Fruit Basket"
+description = "Collected 3 different fruits."
+required_tags = PackedStringArray("fruit")
+bonus_points = 50

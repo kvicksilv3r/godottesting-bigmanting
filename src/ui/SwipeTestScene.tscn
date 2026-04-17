@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://src/ui/SwipeTestScene.cs" id="1_SwipeTestScene"]
+[ext_resource type="PackedScene" path="res://src/ui/SwipeCard.tscn" id="2_SwipeCard"]
+
+[node name="SwipeTestScene" type="Control"]
+script = ExtResource("1_SwipeTestScene")
+anchor_right = 1.0
+anchor_bottom = 1.0
+card_scene = ExtResource("2_SwipeCard")
+
+[node name="ScoreLabel" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 200.0
+offset_bottom = 48.0
+text = "Score: 0"
+theme_override_font_sizes/font_size = 20
+
+[node name="ComboLabel" type="Label" parent="."]
+unique_name_in_owner = true
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 16.0
+offset_right = 200.0
+offset_bottom = 48.0
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 20
+theme_override_colors/font_color = Color(1, 0.85, 0.1)
+
+[node name="CardArea" type="Control" parent="."]
+unique_name_in_owner = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="StatusLabel" type="Label" parent="."]
+unique_name_in_owner = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -30.0
+offset_right = 200.0
+offset_bottom = 30.0
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 28
+visible = false
