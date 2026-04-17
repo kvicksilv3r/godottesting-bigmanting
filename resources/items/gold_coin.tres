@@ -1,11 +1,13 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://brdgbepkab7h1"]
 
-[ext_resource type="Script" path="res://src/items/ItemResource.cs" id="1_ItemResource"]
+[ext_resource type="Texture2D" uid="uid://bup8xqnpyg2mp" path="res://icon.svg" id="1_fvnps"]
+[ext_resource type="Script" uid="uid://c28rug6k7py1q" path="res://src/items/ItemResource.cs" id="1_ItemResource"]
 
 [resource]
 script = ExtResource("1_ItemResource")
-id = "gold_coin"
-display_name = "Gold Coin"
-description = "Shiny and valuable."
-tags = PackedStringArray("treasure", "metal")
-base_value = 20
+Id = "item_coin_gold"
+DisplayName = "Gold coin"
+Description = "Au-tism"
+Icon = ExtResource("1_fvnps")
+Tags = PackedStringArray("gold", "metal")
+BaseValue = 5

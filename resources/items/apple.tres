@@ -1,11 +1,12 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://chevs5qu082oi"]
 
-[ext_resource type="Script" path="res://src/items/ItemResource.cs" id="1_ItemResource"]
+[ext_resource type="Texture2D" uid="uid://bup8xqnpyg2mp" path="res://icon.svg" id="1_2oqkr"]
+[ext_resource type="Script" uid="uid://c28rug6k7py1q" path="res://src/items/ItemResource.cs" id="1_ItemResource"]
 
 [resource]
 script = ExtResource("1_ItemResource")
-id = "apple"
-display_name = "Apple"
-description = "A crisp red apple."
-tags = PackedStringArray("fruit", "food")
-base_value = 5
+Id = "item_apple"
+DisplayName = "Apple"
+Description = "Granny smith"
+Icon = ExtResource("1_2oqkr")
+Tags = PackedStringArray("fruit", "sweet")
