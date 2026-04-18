@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://gamestate001"]
+
+[ext_resource type="Script" uid="uid://ctqgda2ob7jwu" path="res://src/autoloads/GameState.cs" id="1_GameState"]
+
+[node name="GameState" type="Node" unique_id=1912530326]
+script = ExtResource("1_GameState")
+StarterItemIds = Array[String](["item_apple", "item_bread", "item_milk", "item_coin_silver", "item_coin_gold"])

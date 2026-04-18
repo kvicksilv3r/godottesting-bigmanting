@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://summaryscene001"]
+
+[ext_resource type="Script" path="res://src/ui/SummaryScene.cs" id="1_SummaryScene"]
+
+[node name="SummaryScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_SummaryScene")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = -40.0
+offset_bottom = -40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 16
+
+[node name="ScoreHeader" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=100]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Round complete — Score: 0"
+
+[node name="CollectedHeader" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Collected Items"
+
+[node name="CollectedList" type="VBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=101]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ComboHeader" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Combos"
+
+[node name="ComboList" type="VBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=102]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="NewDiscoveriesSection" type="VBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=103]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="NewDiscoveriesHeader" type="Label" parent="ScrollContainer/VBoxContainer/NewDiscoveriesSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2, 1, 0.4, 1)
+theme_override_font_sizes/font_size = 18
+text = "Newly Discovered!"
+
+[node name="NewDiscoveriesList" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/NewDiscoveriesSection" unique_id=104]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="NewUnlocksSection" type="VBoxContainer" parent="ScrollContainer/VBoxContainer" unique_id=105]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="NewUnlocksHeader" type="Label" parent="ScrollContainer/VBoxContainer/NewUnlocksSection"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.1, 1)
+theme_override_font_sizes/font_size = 18
+text = "Newly Unlocked!"
+
+[node name="NewUnlocksList" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/NewUnlocksSection" unique_id=106]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ButtonRow" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="PlayAgainButton" type="Button" parent="ScrollContainer/VBoxContainer/ButtonRow" unique_id=107]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Play Again"
+
+[node name="CodexButton" type="Button" parent="ScrollContainer/VBoxContainer/ButtonRow" unique_id=108]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Codex"

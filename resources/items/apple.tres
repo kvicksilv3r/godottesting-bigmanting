@@ -9,4 +9,4 @@ Id = "item_apple"
 DisplayName = "Apple"
 Description = "Granny smith"
 Icon = ExtResource("1_2oqkr")
-Tags = PackedStringArray("fruit", "sweet")
+Tags = PackedStringArray("fruit", "i_apple")

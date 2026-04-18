@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="ComboRule" format=3 uid="uid://baheac2wbenll"]
+
+[ext_resource type="Script" uid="uid://cfsh482e26t2d" path="res://src/items/ComboRule.cs" id="1_ComboRule"]
+[ext_resource type="Script" uid="uid://b3di20sdpxocd" path="res://src/items/TagRequirement.cs" id="2_TagReq"]
+
+[sub_resource type="Resource" id="Resource_uskeg"]
+script = ExtResource("2_TagReq")
+Tag = "i_apple"
+metadata/_custom_type_script = "uid://b3di20sdpxocd"
+
+[sub_resource type="Resource" id="Resource_u4ekp"]
+script = ExtResource("2_TagReq")
+Tag = "i_bread"
+metadata/_custom_type_script = "uid://b3di20sdpxocd"
+
+[resource]
+script = ExtResource("1_ComboRule")
+ComboName = "Breakfast"
+Description = "Grain and dairy — a proper morning meal."
+Requirements = Array[ExtResource("2_TagReq")]([SubResource("Resource_uskeg"), SubResource("Resource_u4ekp")])
+BonusPoints = 12
+RewardItemId = "item_sandwich"

@@ -1,9 +1,7 @@
 [gd_scene format=3 uid="uid://cxa1h3gmgfx8y"]
 
 [ext_resource type="Script" uid="uid://dd6rmw2e62rfw" path="res://src/ui/SwipeTestScene.cs" id="1_SwipeTestScene"]
-[ext_resource type="Script" uid="uid://c28rug6k7py1q" path="res://src/items/ItemResource.cs" id="2_2q2gv"]
 [ext_resource type="PackedScene" path="res://src/ui/SwipeCard.tscn" id="2_SwipeCard"]
-[ext_resource type="Resource" uid="uid://chevs5qu082oi" path="res://resources/items/apple.tres" id="3_bvs3b"]
 
 [node name="SwipeTestScene" type="Control" unique_id=2016944642]
 layout_mode = 3
@@ -11,7 +9,6 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource("1_SwipeTestScene")
-Items = Array[ExtResource("2_2q2gv")]([ExtResource("3_bvs3b")])
 CardScene = ExtResource("2_SwipeCard")
 
 [node name="ScoreLabel" type="Label" parent="." unique_id=829055157]
@@ -42,6 +39,34 @@ unique_name_in_owner = true
 anchors_preset = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
+
+[node name="TakenLabel" type="Label" parent="." unique_id=400]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -200.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = 48.0
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 2
+text = "0/5 taken"
+
+[node name="RemainingLabel" type="Label" parent="." unique_id=401]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -48.0
+offset_right = 200.0
+offset_bottom = -16.0
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+text = "20 cards remaining"
 
 [node name="StatusLabel" type="Label" parent="." unique_id=217139153]
 unique_name_in_owner = true

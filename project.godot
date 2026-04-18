@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="BigManTing"
-run/main_scene="res://src/ui/SwipeTestScene.tscn"
+run/main_scene="res://src/ui/MainMenuScene.tscn"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameState="*res://src/autoloads/GameState.tscn"
+CollectionManager="*res://src/autoloads/CollectionManager.cs"
 
 [dotnet]
 

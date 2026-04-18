@@ -6,8 +6,8 @@
 [resource]
 script = ExtResource("1_ItemResource")
 Id = "item_coin_gold"
-DisplayName = "Gold coin"
+DisplayName = "Gold Coin"
 Description = "Au-tism"
 Icon = ExtResource("1_fvnps")
-Tags = PackedStringArray("gold", "metal")
+Tags = PackedStringArray("gold")
 BaseValue = 5

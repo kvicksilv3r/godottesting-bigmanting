@@ -1,11 +1,11 @@
-[gd_resource type="Resource" script_class="ComboRule" format=3 uid="uid://5t64dadk4t7g"]
+[gd_resource type="Resource" script_class="ComboRule" format=3 uid="uid://b05a4s20ilsra"]
 
 [ext_resource type="Script" uid="uid://cfsh482e26t2d" path="res://src/items/ComboRule.cs" id="1_ComboRule"]
 [ext_resource type="Script" uid="uid://b3di20sdpxocd" path="res://src/items/TagRequirement.cs" id="2_TagReq"]
 
 [resource]
 script = ExtResource("1_ComboRule")
-ComboName = "Fruit Basket"
-Description = "Fruit and grain together — bake it into a pie!"
-BonusPoints = 10
-RewardItemId = "item_pie"
+ComboName = "Harvest"
+Description = "Fruit, grain, and dairy — a full harvest feast!"
+BonusPoints = 20
+RewardItemId = "item_sandwich"
