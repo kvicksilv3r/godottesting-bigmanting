@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://gen_item_0014"]
+
+[ext_resource type="Texture2D" path="res://assets/art/sprites/items/tiger.svg" id="1_icon"]
+[ext_resource type="Script" uid="uid://c28rug6k7py1q" path="res://src/items/ItemResource.cs" id="1_ItemResource"]
+
+[resource]
+script = ExtResource("1_ItemResource")
+Id = "item_tiger"
+DisplayName = "Tiger"
+Icon = ExtResource("1_icon")
+Tags = PackedStringArray("i_tiger", "animal", "mammal", "hairy", "loud", "striped", "wild", "predator", "orange")
+BaseValue = 5

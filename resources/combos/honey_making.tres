@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="ComboRule" format=3 uid="uid://gen_combo_0042"]
+
+[ext_resource type="Script" uid="uid://cfsh482e26t2d" path="res://src/items/ComboRule.cs" id="1_ComboRule"]
+[ext_resource type="Script" uid="uid://b3di20sdpxocd" path="res://src/items/TagRequirement.cs" id="2_TagReq"]
+
+[sub_resource type="Resource" id="Req_1"]
+script = ExtResource("2_TagReq")
+Tag = "i_bee"
+Count = 1
+
+[sub_resource type="Resource" id="Req_2"]
+script = ExtResource("2_TagReq")
+Tag = "i_sun"
+Count = 1
+
+[sub_resource type="Resource" id="Req_3"]
+script = ExtResource("2_TagReq")
+Tag = "i_time"
+Count = 1
+
+[resource]
+script = ExtResource("1_ComboRule")
+ComboName = "Honey Making"
+Description = "Sweet labor"
+Requirements = Array[ExtResource("2_TagReq")]([SubResource("Req_1"), SubResource("Req_2"), SubResource("Req_3")])
+BonusPoints = 10
+RewardItemId = "item_honey"

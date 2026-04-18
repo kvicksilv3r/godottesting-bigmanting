@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="ComboRule" format=3 uid="uid://gen_combo_0019"]
+
+[ext_resource type="Script" uid="uid://cfsh482e26t2d" path="res://src/items/ComboRule.cs" id="1_ComboRule"]
+[ext_resource type="Script" uid="uid://b3di20sdpxocd" path="res://src/items/TagRequirement.cs" id="2_TagReq"]
+
+[sub_resource type="Resource" id="Req_1"]
+script = ExtResource("2_TagReq")
+Tag = "i_snow"
+Count = 1
+
+[sub_resource type="Resource" id="Req_2"]
+script = ExtResource("2_TagReq")
+Tag = "i_fog"
+Count = 1
+
+[resource]
+script = ExtResource("1_ComboRule")
+ComboName = "Silence Make"
+Description = "When the world stops"
+Requirements = Array[ExtResource("2_TagReq")]([SubResource("Req_1"), SubResource("Req_2")])
+BonusPoints = 10
+RewardItemId = "item_silence"

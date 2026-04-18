@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://gen_item_0022"]
+
+[ext_resource type="Texture2D" path="res://assets/art/sprites/items/nail.svg" id="1_icon"]
+[ext_resource type="Script" uid="uid://c28rug6k7py1q" path="res://src/items/ItemResource.cs" id="1_ItemResource"]
+
+[resource]
+script = ExtResource("1_ItemResource")
+Id = "item_nail"
+DisplayName = "Nail"
+Icon = ExtResource("1_icon")
+Tags = PackedStringArray("i_nail", "tool", "hard", "sharp", "metal", "construct", "pointed", "small", "connect", "rust_prone")
+BaseValue = 3

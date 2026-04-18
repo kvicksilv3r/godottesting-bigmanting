@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="ComboRule" format=3 uid="uid://gen_combo_0131"]
+
+[ext_resource type="Script" uid="uid://cfsh482e26t2d" path="res://src/items/ComboRule.cs" id="1_ComboRule"]
+[ext_resource type="Script" uid="uid://b3di20sdpxocd" path="res://src/items/TagRequirement.cs" id="2_TagReq"]
+
+[sub_resource type="Resource" id="Req_1"]
+script = ExtResource("2_TagReq")
+Tag = "i_flour"
+Count = 1
+
+[sub_resource type="Resource" id="Req_2"]
+script = ExtResource("2_TagReq")
+Tag = "i_sugar"
+Count = 1
+
+[sub_resource type="Resource" id="Req_3"]
+script = ExtResource("2_TagReq")
+Tag = "i_salt"
+Count = 1
+
+[sub_resource type="Resource" id="Req_4"]
+script = ExtResource("2_TagReq")
+Tag = "i_butter"
+Count = 1
+
+[sub_resource type="Resource" id="Req_5"]
+script = ExtResource("2_TagReq")
+Tag = "i_yeast"
+Count = 1
+
+[resource]
+script = ExtResource("1_ComboRule")
+ComboName = "Bakery"
+Description = "Everything for pastry"
+Requirements = Array[ExtResource("2_TagReq")]([SubResource("Req_1"), SubResource("Req_2"), SubResource("Req_3"), SubResource("Req_4"), SubResource("Req_5")])
+BonusPoints = 5
+RewardItemId = ""

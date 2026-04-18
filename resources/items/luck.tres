@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemResource" format=3 uid="uid://gen_item_0084"]
+
+[ext_resource type="Texture2D" path="res://assets/art/sprites/items/luck.svg" id="1_icon"]
+[ext_resource type="Script" uid="uid://c28rug6k7py1q" path="res://src/items/ItemResource.cs" id="1_ItemResource"]
+
+[resource]
+script = ExtResource("1_ItemResource")
+Id = "item_luck"
+DisplayName = "Luck"
+Icon = ExtResource("1_icon")
+Tags = PackedStringArray("i_luck", "abstract", "invisible", "fleeting", "rare", "powerful", "unpredictable", "universal", "lucky", "random")
+BaseValue = 4

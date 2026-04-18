@@ -99,6 +99,20 @@ public partial class GameState : Node
 		return reward;
 	}
 
+	public void ClearSave()
+	{
+		if (FileAccess.FileExists(SavePath))
+			DirAccess.RemoveAbsolute(ProjectSettings.GlobalizePath(SavePath));
+
+		UnlockedItemIds.Clear();
+		DiscoveredComboIds.Clear();
+		NewlyUnlockedThisRound.Clear();
+		NewlyDiscoveredThisRound.Clear();
+
+		foreach (var id in StarterItemIds)
+			UnlockedItemIds.Add(id);
+	}
+
 	public void Save()
 	{
 		var data = new System.Collections.Generic.Dictionary<string, object>

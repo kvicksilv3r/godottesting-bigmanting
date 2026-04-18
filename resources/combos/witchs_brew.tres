@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="ComboRule" format=3 uid="uid://gen_combo_0166"]
+
+[ext_resource type="Script" uid="uid://cfsh482e26t2d" path="res://src/items/ComboRule.cs" id="1_ComboRule"]
+[ext_resource type="Script" uid="uid://b3di20sdpxocd" path="res://src/items/TagRequirement.cs" id="2_TagReq"]
+
+[sub_resource type="Resource" id="Req_1"]
+script = ExtResource("2_TagReq")
+Tag = "i_fire"
+Count = 1
+
+[sub_resource type="Resource" id="Req_2"]
+script = ExtResource("2_TagReq")
+Tag = "i_water"
+Count = 1
+
+[sub_resource type="Resource" id="Req_3"]
+script = ExtResource("2_TagReq")
+Tag = "i_venom"
+Count = 1
+
+[sub_resource type="Resource" id="Req_4"]
+script = ExtResource("2_TagReq")
+Tag = "i_tooth"
+Count = 1
+
+[sub_resource type="Resource" id="Req_5"]
+script = ExtResource("2_TagReq")
+Tag = "i_bone"
+Count = 1
+
+[resource]
+script = ExtResource("1_ComboRule")
+ComboName = "Witchs Brew"
+Description = "Double double toil and trouble"
+Requirements = Array[ExtResource("2_TagReq")]([SubResource("Req_1"), SubResource("Req_2"), SubResource("Req_3"), SubResource("Req_4"), SubResource("Req_5")])
+BonusPoints = 20
+RewardItemId = ""

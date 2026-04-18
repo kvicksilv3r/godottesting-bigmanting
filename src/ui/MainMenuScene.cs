@@ -14,5 +14,10 @@ public partial class MainMenuScene : Control
 			GameState.CodexReturnScene = "res://src/ui/MainMenuScene.tscn";
 			GetTree().ChangeSceneToFile("res://src/ui/CodexScene.tscn");
 		};
+
+		GetNode<Button>("%ClearSaveButton").Pressed += () =>
+		{
+			GetNode<GameState>("/root/GameState").ClearSave();
+		};
 	}
 }

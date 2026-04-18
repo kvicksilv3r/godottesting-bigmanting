@@ -4,4 +4,4 @@
 
 [node name="GameState" type="Node" unique_id=1912530326]
 script = ExtResource("1_GameState")
-StarterItemIds = Array[String](["item_apple", "item_bread", "item_milk", "item_coin_silver", "item_coin_gold"])
+StarterItemIds = Array[String](["item_fire", "item_water", "item_earth", "item_air", "item_sun", "item_apple", "item_seed"])
