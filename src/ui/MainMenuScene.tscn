@@ -2,6 +2,27 @@
 
 [ext_resource type="Script" path="res://src/ui/MainMenuScene.cs" id="1_MainMenu"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ClearNormal"]
+bg_color = Color(0.65, 0.1, 0.1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ClearHover"]
+bg_color = Color(0.8, 0.15, 0.15, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ClearPressed"]
+bg_color = Color(0.5, 0.07, 0.07, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
 [node name="MainMenuScene" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -47,3 +68,11 @@ layout_mode = 2
 custom_minimum_size = Vector2(200, 48)
 theme_override_font_sizes/font_size = 20
 text = "Clear Save"
+theme_override_styles/normal = SubResource("StyleBoxFlat_ClearNormal")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ClearHover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ClearPressed")
+
+[node name="ClearSaveDialog" type="ConfirmationDialog" parent="." unique_id=303]
+unique_name_in_owner = true
+title = "Clear Save?"
+dialog_text = "This will delete all your progress. Are you sure?"

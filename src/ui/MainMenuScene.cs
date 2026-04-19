@@ -15,7 +15,14 @@ public partial class MainMenuScene : Control
 			GetTree().ChangeSceneToFile("res://src/ui/CodexScene.tscn");
 		};
 
+		var clearSaveDialog = GetNode<ConfirmationDialog>("%ClearSaveDialog");
+
 		GetNode<Button>("%ClearSaveButton").Pressed += () =>
+		{
+			clearSaveDialog.PopupCentered();
+		};
+
+		clearSaveDialog.Confirmed += () =>
 		{
 			GetNode<GameState>("/root/GameState").ClearSave();
 		};

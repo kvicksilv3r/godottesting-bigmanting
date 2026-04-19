@@ -26,7 +26,6 @@ public partial class SwipeCard : Control
 	{
 		_homePosition = Position;
 		PivotOffset = Size / 2f;
-		GD.Print($"[SwipeCard] Ready — Position={Position}, Size={Size}");
 
 		_nameLabel = GetNode<Label>("%ItemName");
 		_descLabel = GetNode<Label>("%ItemDescription");
@@ -47,10 +46,8 @@ public partial class SwipeCard : Control
 	// Initial press must land on the card
 	public override void _GuiInput(InputEvent @event)
 	{
-		GD.Print($"[SwipeCard] _GuiInput: {@event.GetType().Name}");
 		if (@event is InputEventMouseButton { ButtonIndex: MouseButton.Left, Pressed: true })
 		{
-			GD.Print("click");
 			_dragging = true;
 			_dragStart = GetGlobalMousePosition();
 		}
@@ -86,15 +83,12 @@ public partial class SwipeCard : Control
 
 	private void ReleaseDrag()
 	{
-		GD.Print($"[SwipeCard] ReleaseDrag — dragX={_dragX}, threshold={SwipeThreshold}");
 		if (_dragX > SwipeThreshold)
 		{
-			GD.Print("swipe right");
 			AnimateOut(1);
 		}
 		else if (_dragX < -SwipeThreshold)
 		{
-			GD.Print("swipe left");
 			AnimateOut(-1);
 		}
 		else

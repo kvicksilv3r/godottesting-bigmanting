@@ -32,6 +32,7 @@ public partial class CollectionManager : Node
 	{
 		CollectedItems.Add(item);
 		Score += item.BaseValue;
+		GetNode<GameState>("/root/GameState").TotalPoints += item.BaseValue;
 		EmitSignal(SignalName.ItemCollected, item);
 		EmitSignal(SignalName.ScoreChanged, Score);
 		CheckCombos();
@@ -54,6 +55,7 @@ public partial class CollectionManager : Node
 		var gameState = GetNode<GameState>("/root/GameState");
 		gameState.NewlyUnlockedThisRound.Clear();
 		gameState.NewlyDiscoveredThisRound.Clear();
+		gameState.PossibleCombosCountAtRoundStart = gameState.PossibleCombos.Count;
 	}
 
 	private void CheckCombos()
@@ -90,6 +92,7 @@ public partial class CollectionManager : Node
 				TriggeredCombosThisRound.Add(combo);
 				Score += combo.BonusPoints;
 				var gameState = GetNode<GameState>("/root/GameState");
+				gameState.TotalPoints += combo.BonusPoints;
 				gameState.MarkComboDiscovered(combo);
 				EmitSignal(SignalName.ComboTriggered, combo);
 				EmitSignal(SignalName.ScoreChanged, Score);

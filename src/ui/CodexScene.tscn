@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://codexscene001"]
 
 [ext_resource type="Script" path="res://src/ui/CodexScene.cs" id="1_CodexScene"]
+[ext_resource type="Texture2D" path="res://assets/art/sprites/icon_sort_recent.svg" id="2_RecentIcon"]
+[ext_resource type="Texture2D" path="res://assets/art/sprites/icon_sort_alpha.svg" id="3_AlphaIcon"]
 
 [node name="CodexScene" type="Control"]
 layout_mode = 3
@@ -25,11 +27,72 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 28
 text = "Codex"
 
-[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+[node name="TabContainer" type="TabContainer" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="ComboList" type="VBoxContainer" parent="VBoxContainer/ScrollContainer" unique_id=200]
+[node name="Combos" type="VBoxContainer" parent="VBoxContainer/TabContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="SortBar" type="HBoxContainer" parent="VBoxContainer/TabContainer/Combos"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="RecentButton" type="Button" parent="VBoxContainer/TabContainer/Combos/SortBar" unique_id=202]
+unique_name_in_owner = true
+layout_mode = 2
+icon = ExtResource("2_RecentIcon")
+text = "Recent"
+theme_override_constants/icon_max_width = 32
+
+[node name="AlphaButton" type="Button" parent="VBoxContainer/TabContainer/Combos/SortBar" unique_id=203]
+unique_name_in_owner = true
+layout_mode = 2
+icon = ExtResource("3_AlphaIcon")
+text = "A-Z"
+theme_override_constants/icon_max_width = 32
+
+[node name="HintBar" type="HBoxContainer" parent="VBoxContainer/TabContainer/Combos"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="HintButton" type="Button" parent="VBoxContainer/TabContainer/Combos/HintBar" unique_id=204]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Hint (100 pts)"
+
+[node name="PointsLabel" type="Label" parent="VBoxContainer/TabContainer/Combos/HintBar" unique_id=205]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.7, 0.7, 0.7, 1)
+
+[node name="TrackedLabel" type="Label" parent="VBoxContainer/TabContainer/Combos/HintBar" unique_id=206]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.7, 0.7, 0.7, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/TabContainer/Combos"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ComboList" type="VBoxContainer" parent="VBoxContainer/TabContainer/Combos/ScrollContainer" unique_id=200]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="Items" type="VBoxContainer" parent="VBoxContainer/TabContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/TabContainer/Items"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ItemList" type="VBoxContainer" parent="VBoxContainer/TabContainer/Items/ScrollContainer" unique_id=207]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3

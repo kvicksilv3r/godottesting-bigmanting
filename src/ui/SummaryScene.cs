@@ -11,8 +11,10 @@ public partial class SummaryScene : Control
     private VBoxContainer _newDiscoveriesList = null!;
     private Control _newUnlocksSection = null!;
     private VBoxContainer _newUnlocksList = null!;
+    private Label _availableCombosLabel = null!;
     private Button _playAgainButton = null!;
     private Button _codexButton = null!;
+    private Button _mainMenuButton = null!;
 
     public override void _Ready()
     {
@@ -23,10 +25,13 @@ public partial class SummaryScene : Control
         _newDiscoveriesList = GetNode<VBoxContainer>("%NewDiscoveriesList");
         _newUnlocksSection = GetNode<Control>("%NewUnlocksSection");
         _newUnlocksList = GetNode<VBoxContainer>("%NewUnlocksList");
+        _availableCombosLabel = GetNode<Label>("%AvailableCombosLabel");
         _playAgainButton = GetNode<Button>("%PlayAgainButton");
         _codexButton = GetNode<Button>("%CodexButton");
+        _mainMenuButton = GetNode<Button>("%MainMenuButton");
 
         _playAgainButton.Pressed += () => GetTree().ChangeSceneToFile("res://src/ui/SwipeTestScene.tscn");
+        _mainMenuButton.Pressed += () => GetTree().ChangeSceneToFile("res://src/ui/MainMenuScene.tscn");
         _codexButton.Pressed += () =>
         {
             GameState.CodexReturnScene = "res://src/ui/SummaryScene.tscn";
@@ -70,6 +75,14 @@ public partial class SummaryScene : Control
         {
             _newUnlocksSection.Visible = false;
         }
+
+        var current = gameState.PossibleCombos.Count;
+        var previous = gameState.PossibleCombosCountAtRoundStart;
+        var delta = current - previous;
+
+        _availableCombosLabel.Text = delta > 0
+            ? $"{current} combos available  (+{delta} from new items)"
+            : $"{current} combos available";
     }
 
     private static Label MakeLabel(string text)
